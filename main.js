@@ -71,8 +71,15 @@ dclient.on('message', async message => { //Handle messages from discord to twitc
                 return;
             }
         }
-        console.log(`[Discord] #${channel} ${message.author.tag}: ${message.cleanContent}`); //Log to console
-        await tclient.privmsg(channelName = channel, message = message.cleanContent); //Send the message to the IRC
+        var re = new RegExp('<(a?):([a-zA-Z0-9_]{2,32}):([0-9]{18,22})>', "g"); //Regex for discord emotes. Found on discord.py discord
+        var arr = message.cleanContent.matchAll(re);
+        var s = message.cleanContent;
+
+        for (const match of arr) {
+            s = s.replace(match[0], match[2]);
+        }
+        console.log(`[Discord] #${channel} ${message.author.tag}: ${s}`); //Log to console
+        await tclient.privmsg(channelName = channel, message = s); //Send the message to the IRC
     }
 });
 
