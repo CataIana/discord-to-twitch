@@ -8,7 +8,7 @@
             "forward_usernotices": true,
             "forward_user_channel_usernotices": false,
             "ignore_personal_usernotices": true,
-            "blacklisted_usernotices": ["host"],
+            "blacklisted_usernotices": ["host_on"],
             "forwarded_twitch_users": [],
             "allowed_discord_user_ids": [],
             "discord_channel_id": ""

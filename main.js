@@ -216,10 +216,11 @@ tclient.on("message", async message => {//Hosts and other usernotices need to be
             return;
         }
 
-        let personal_usernotices = ["host", "hostoff", "mod_success", "unmod_success", "vip_success", "unvip_success", "timeout_success", "untimeout_success", "ban_success", "unban_success", "cmds_available", "room_mods", "room_vips"]; //The generally used ones that are directed at the user
+        let personal_usernotices = ["host", "host_on", "hostoff", "mod_success", "unmod_success", "vip_success", "unvip_success", "timeout_success", "untimeout_success", "ban_success", "unban_success", "cmds_available", "room_mods", "room_vips"]; //The generally used ones that are directed at the user
         if (!tools.isInArray(type, personal_usernotices)) {
             type = "other"; //If it's not in this general list of usernotice types, just set it to other. Most usernotices won't come in here
         }
+        console.log(message.messageID);
         if (!config["channels"][message.channelName]["ignore_personal_usernotices"]) { //This is for ignoring notices only for the specific user, or hosts/raids.
             logToDiscord(message.channelName, `[Notification]: ${message.messageText}`, type); //For example when you vip/ban/mod a user, or when the channel hosts or exists hosting mode
         }

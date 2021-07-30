@@ -21,5 +21,5 @@ Each key inside the channels is a twitch channel.
 * Allowed discord IDs are an array of user IDs that are able to send messages and have them be forwarded to twitch. The IDs must be strings.
 * The discord channel ID is the channel that the messages will be forwarded to. It also must be a string
 
-Usernotice Blacklist Options: `bits, sub, resub, raid, subgift, giftcontinue, bitstier, host, hostoff, mod_success, unmod_success, vip_success, unvip_success, timeout_success, untimeout_success, ban_success, unban_success, cmds_available, room_mods, room_vips, timeout, chatclear, ban, delete`
+Usernotice Blacklist Options: `bits, sub, resub, raid, subgift, giftcontinue, bitstier, host_on, host_off, mod_success, unmod_success, vip_success, unvip_success, timeout_success, untimeout_success, ban_success, unban_success, cmds_available, room_mods, room_vips, timeout, chatclear, ban, delete`
 There are far more usernotices, but due to the sheer amount, such as incorrect usage, and errors, they have been categorized into "other".
