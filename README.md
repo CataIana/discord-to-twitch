@@ -3,6 +3,9 @@ It supports forwarding various usernotices such as subs, raids, timeouts, along 
 
 This is kinda a weird project that a friend suggested to me. I'm also bad at JS lmao
 
+#Requirements:
+Node v12+
+
 # Setup:
 1. Clone the repo
 2. Run `npm install` inside the cloned directory
