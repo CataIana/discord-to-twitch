@@ -215,11 +215,6 @@ tclient.on("message", async message => {//Hosts and other usernotices need to be
         if (tools.isInArray(type, documented_usernotices)) {
             return;
         }
-        fs.appendFile('./IDlogs.log', `[${message.channelName}] ${message.messageID}: ${message.messageText}\n`, 'utf8', (err) => {
-            if (err) {
-                console.log(`Error writing ID log file: ${err}`);
-            }
-        });
 
         let personal_usernotices = ["host", "host_on", "hostoff", "host_target_went_offline", "mod_success", "unmod_success", "vip_success", "unvip_success", "timeout_success", "untimeout_success", "ban_success", "unban_success", "cmds_available", "room_mods", "room_vips"]; //The generally used ones that are directed at the user
         if (!tools.isInArray(type, personal_usernotices)) {
