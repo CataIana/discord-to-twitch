@@ -1,3 +1,5 @@
+# I've since remade this in python, using slash commands. See https://github.com/CataIana/twitchcommandbot
+
 This is one of my beginner js projects that allows communication to twitch via discord
 It supports forwarding various usernotices such as subs, raids, timeouts, along with usernotices that are sent to only the user such as modding/viping etc
 
